@@ -5,6 +5,7 @@
 <img src="https://img.shields.io/badge/-Spring%20Boot-%2300b33c" height=30/>
 <img src="https://img.shields.io/badge/-Spring%20Tool%20Suite%204%20(STS4)-brightgreen" height=30/>
 <img src="https://img.shields.io/badge/-Restful--webservices-%23ffff00" height=30/>
+<img src="https://img.shields.io/badge/-Logback-%23ff9900" height=30/>
 <img src="https://img.shields.io/badge/-JUnit5-%231a75ff" height=30/> 
 
 <h2><strong>Some important links:-</strong></h2>
