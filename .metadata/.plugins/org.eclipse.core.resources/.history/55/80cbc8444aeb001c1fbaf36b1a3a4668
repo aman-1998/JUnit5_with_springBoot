@@ -1,0 +1,80 @@
+package personal.learning.controller;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.Collections;
+
+import org.hibernate.SessionFactory;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import personal.learning.custom.response.ErrorPayload;
+import personal.learning.model.dao.BrandDAO;
+import personal.learning.model.entity.Brand;
+import personal.learning.services.BrandService;
+
+//@RunWith(SpringRunner.class)
+@SpringBootTest
+class BrandControllerTest {
+	
+	private BrandController brandController;
+	
+	@Autowired
+	SessionFactory sessionFactory;
+	
+	//@Autowired
+	private BrandDAO brandRepo;
+	
+	//@Autowired
+	BrandService brandService;
+	
+	@BeforeEach
+	public void setUp() {
+		brandRepo = new BrandDAO(sessionFactory);
+		brandService = new BrandService(brandRepo);
+		brandController = new BrandController(brandService);
+	}
+
+	@Test
+	public void shouldReturnNonEmptyList() {
+		assertThat(brandController.getBrands().getBody()).isNotEqualTo(Collections.emptyList());
+	}
+	
+	@Test
+	public void shouldReturnDefaultBrandWhenBrandwithGivenIdNotPresent() {
+		assertThat(brandController.getBrand(123).getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+	}
+	
+	@Test
+	public void shouldGiveErrorDuringBrandCreationIfBrandAlreadyExists() {
+		Brand brand = new Brand(2, "Ducati");
+		assertThat(brandController.updateBrand(2, brand).getBody()).isEqualTo(new ErrorPayload("Creation of brand is unsuccessful", HttpStatus.UNPROCESSABLE_ENTITY));
+		assertThat(brandController.createBrand(brand).getStatusCode()).isEqualTo(HttpStatus.UNPROCESSABLE_ENTITY);
+	}
+	
+	@Test
+	public void shouldReturnErrorDuringUpdationIfBrandDoesNotExist() {
+		Brand brand = new Brand(2, "Ducati");
+		assertThat(brandController.updateBrand(2, brand).getBody()).isEqualTo(new ErrorPayload("Brand with brand id ["+ 2 +"] is not updated", HttpStatus.NOT_FOUND));
+		assertThat(brandController.updateBrand(2, brand).getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+	}
+	
+	@Test
+	public void shouldReturnErrorDuringUpdationIfBrandIdOfPayloadAndParameterDoesNotMatch() {
+		Brand brand = new Brand(1, "Mahindra");
+		assertThat(brandController.updateBrand(2, brand).getBody()).isEqualTo(new ErrorPayload("Brand with brand id ["+ 2 +"] is not updated", HttpStatus.NOT_FOUND));
+		assertThat(brandController.updateBrand(2, brand).getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+	}
+	
+	@Test
+	public void shouldReturnErrorIfDuringDeletionBrandDoesNotExist() {
+		int id = 2;
+		assertThat(brandController.deleteBrand(2).getBody()).isEqualTo(new ErrorPayload("Brand with brand id ["+ 2 +"] is not deleted", HttpStatus.NOT_FOUND));
+		assertThat(brandController.deleteBrand(2).getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+	}
+
+}

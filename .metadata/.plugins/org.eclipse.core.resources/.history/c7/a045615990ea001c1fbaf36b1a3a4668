@@ -1,0 +1,85 @@
+package personal.learning.useful;
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertIterableEquals;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.junit.jupiter.api.Test;
+
+class ArithmaticOperationsTest {
+
+	@Test
+	void testAdd() {
+		ArithmaticOperations arithMaticOperations = new ArithmaticOperations();
+		int actual = arithMaticOperations.add(4, 6);
+		int expected = 10;
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	void testSubtract() {
+		ArithmaticOperations arithMaticOperations = new ArithmaticOperations();
+		int actual = arithMaticOperations.subtract(3, 9);
+		int expected = -6;
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	void testMultiply() {
+		ArithmaticOperations arithMaticOperations = new ArithmaticOperations();
+		int actual = arithMaticOperations.multiply(6, 9);
+		int expected = 54;
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	void testDivide() {
+		ArithmaticOperations arithMaticOperations = new ArithmaticOperations();
+		int actual = arithMaticOperations.divide(10, 2);
+		int expected = 5;
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	void testReturnArray() {
+		ArithmaticOperations arithMaticOperations = new ArithmaticOperations();
+		int[] actual = arithMaticOperations.returnArray();
+		int[] expected = {1, 2, 3, 4};
+		assertArrayEquals(expected, actual);
+	}
+	
+	@Test
+	void testReTurnList() {
+		ArithmaticOperations arithMaticOperations = new ArithmaticOperations();
+		List<String> actualList = new ArrayList<>();
+		actualList = arithMaticOperations.reTurnList();
+		
+		List<String> expectedList = new ArrayList<>();
+		expectedList.add("Aman");
+		expectedList.add("Alka");
+		expectedList.add("Manish");
+		
+		assertIterableEquals(expectedList, actualList);
+	}
+	
+	@Test
+	void testReturnMap() {
+		ArithmaticOperations arithMaticOperations = new ArithmaticOperations();
+		
+		Map<Integer, String> actual = arithMaticOperations.returnMap();
+		
+		Map<Integer, String> expected = new HashMap<>();
+		expected.put(1, "One");
+		expected.put(2, "Two");
+		expected.put(3, "Three");
+		expected.put(5, "Five");
+		
+		assertIterableEquals(expected.entrySet(), actual.entrySet());
+	}
+
+}

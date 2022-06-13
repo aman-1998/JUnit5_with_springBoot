@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CollectionsRelatedTest" project="SpringBoot_JUnit5_Tag_N12" tests="3" started="3" failures="0" errors="0" ignored="1">
+  <testsuite name="personal.learning.useful.CollectionsRelatedTest" time="0.026" displayname="CollectionsRelatedTest" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.CollectionsRelatedTest]">
+    <testcase name="testReturnMap" classname="personal.learning.useful.CollectionsRelatedTest" time="0.0" ignored="true" displayname="Test case related to Map" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.CollectionsRelatedTest]/[method:testReturnMap()]"/>
+    <testcase name="testReTurnList" classname="personal.learning.useful.CollectionsRelatedTest" time="0.019" displayname="Test case related to List" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.CollectionsRelatedTest]/[method:testReTurnList()]"/>
+    <testcase name="testReturnArray" classname="personal.learning.useful.CollectionsRelatedTest" time="0.004" displayname="Test case related to Array" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.CollectionsRelatedTest]/[method:testReturnArray()]"/>
+  </testsuite>
+</testrun>

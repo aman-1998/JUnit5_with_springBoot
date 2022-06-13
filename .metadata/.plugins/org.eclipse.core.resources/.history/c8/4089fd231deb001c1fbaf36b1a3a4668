@@ -1,0 +1,14 @@
+package personal.learning.controller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class BrandControllerTest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

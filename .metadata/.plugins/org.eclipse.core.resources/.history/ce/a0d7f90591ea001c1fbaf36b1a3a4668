@@ -1,0 +1,24 @@
+package personal.learning.useful;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class CollectionsRelatedTest {
+
+	@Test
+	void testReturnArray() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testReTurnList() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	void testReturnMap() {
+		fail("Not yet implemented");
+	}
+
+}

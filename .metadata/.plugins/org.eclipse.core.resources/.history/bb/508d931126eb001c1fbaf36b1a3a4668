@@ -1,0 +1,50 @@
+package personal.learning.controller;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Collections;
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.http.HttpStatus;
+
+import personal.learning.configuration.DBConfiguration;
+import personal.learning.custom.response.ErrorPayload;
+import personal.learning.model.entity.Brand;
+import personal.learning.services.BrandService;
+
+class BrandControllerTest {
+	
+	private BrandController brandController;
+	private BrandService brandService;
+	
+	@BeforeEach
+	public void setUp() {
+		brandController = new BrandController();
+	}
+
+	@Test
+	public void shouldReturnNonEmptyList() {
+		assertThat(brandController.getBrands().getBody()).isNotEqualTo(Collections.emptyList());
+	}
+	
+	@Test
+	public void shouldReturnDefaultBrandWhenBrandwithGivenIdNotPresent() {
+		assertThat(brandController.getBrand(123).getBody()).isEqualTo(new Brand());
+	}
+	
+	@Test
+	public void shouldGiveErrorDuringBrandCreationIfBrandAlreadyExists() {
+		Brand brand = new Brand(2, "Ducati");
+		assertThat(brandController.updateBrand(2, brand).getBody()).isEqualTo(new ErrorPayload("Brand with brand id ["+ 2 +"] is not updated", HttpStatus.NOT_FOUND));
+		assertThat(brandController.createBrand(brand).getStatusCode()).isEqualTo(HttpStatus.NOT_FOUND);
+	}
+	
+	public void shouldReturnErrorDuringUpdationIfBrandDoesNotExist() {
+		
+	}
+
+}

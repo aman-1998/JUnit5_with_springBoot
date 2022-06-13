@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SpringBoot_with_JUnit5_N4" project="SpringBoot_with_JUnit5_N4" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="personal.learning.useful.ArithmaticOperationsTest" time="0.02" displayname="ArithmaticOperationsTest" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]">
+    <testcase name="testAdd" classname="personal.learning.useful.ArithmaticOperationsTest" time="0.007" displayname="testAdd()" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]/[method:testAdd()]"/>
+    <testcase name="testSubtract" classname="personal.learning.useful.ArithmaticOperationsTest" time="0.001" displayname="testSubtract()" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]/[method:testSubtract()]"/>
+    <testcase name="testReTurnList" classname="personal.learning.useful.ArithmaticOperationsTest" time="0.002" displayname="testReTurnList()" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]/[method:testReTurnList()]"/>
+    <testcase name="testDivide" classname="personal.learning.useful.ArithmaticOperationsTest" time="0.001" displayname="testDivide()" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]/[method:testDivide()]"/>
+    <testcase name="testMultiply" classname="personal.learning.useful.ArithmaticOperationsTest" time="0.001" displayname="testMultiply()" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]/[method:testMultiply()]"/>
+    <testcase name="testReturnArray" classname="personal.learning.useful.ArithmaticOperationsTest" time="0.002" displayname="testReturnArray()" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]/[method:testReturnArray()]"/>
+  </testsuite>
+</testrun>

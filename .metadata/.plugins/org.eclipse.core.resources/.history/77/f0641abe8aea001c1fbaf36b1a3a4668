@@ -1,0 +1,25 @@
+package personal.learning.useful;
+
+public class ArithmaticOperations {
+	
+	public int add(int num1, int num2) {
+		return (num1 + num2);
+	}
+	
+	public int subtract(int num1, int num2) {
+		return (num1 - num2);
+	}
+	
+	public int multiply(int num1, int num2) {
+		return (num1 * num2);
+	}
+	
+	public int divide(int num1, int num2) {
+		return (num1 / num2);
+	}
+	
+	public int[] returnArray() {
+		int[] arr = new int[] {1, 2, 3, 4};
+		return arr;
+	}
+}

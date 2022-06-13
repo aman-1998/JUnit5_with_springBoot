@@ -1,0 +1,25 @@
+package personal.learning.useful;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class ArithmaticOperations {
+	
+	public int add(int num1, int num2) {
+		return (num1 + num2);
+	}
+	
+	public int subtract(int num1, int num2) {
+		return (num1 - num2);
+	}
+	
+	public int multiply(int num1, int num2) {
+		return (num1 * num2);
+	}
+	
+	public int divide(int num1, int num2) {
+		return (num1 / num2);
+	}
+}

@@ -1,0 +1,57 @@
+package personal.learning.useful;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class ArithmaticOperationsTest {
+
+	@Test
+	void testAdd() {
+		ArithmaticOperations arithMaticOperations = new ArithmaticOperations();
+		int actual = arithMaticOperations.add(4, 6);
+		int expected = 10;
+		if(expected == actual) {
+			System.out.println("Add pass");
+		} else {
+			System.out.println("Add failed");
+		}
+	}
+
+	@Test
+	void testSubtract() {
+		ArithmaticOperations arithMaticOperations = new ArithmaticOperations();
+		int actual = arithMaticOperations.subtract(3, 9);
+		int expected = -7;
+		if(expected == actual) {
+			System.out.println("Subtract pass");
+		} else {
+			System.out.println("Subtract failed");
+		}
+	}
+
+	@Test
+	void testMultiply() {
+		ArithmaticOperations arithMaticOperations = new ArithmaticOperations();
+		int actual = arithMaticOperations.multiply(6, 9);
+		int expected = 54;
+		if(expected == actual) {
+			System.out.println("Multiply pass");
+		} else {
+			System.out.println("Multiply failed");
+		}
+	}
+
+	@Test
+	void testDivide() {
+		ArithmaticOperations arithMaticOperations = new ArithmaticOperations();
+		int actual = arithMaticOperations.divide(10, 2);
+		int expected = 5;
+		if(expected == actual) {
+			System.out.println("Divide pass");
+		} else {
+			System.out.println("Divide failed");
+		}
+	}
+
+}

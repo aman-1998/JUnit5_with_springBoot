@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SpringBoot_JUnit5_Tag_N12" project="SpringBoot_JUnit5_Tag_N12" tests="1" started="1" failures="0" errors="0" ignored="0" include_tags="runIt" exclude_tags="doNotRunIt">
+  <testsuite name="personal.learning.useful.ArithmaticOperationsTest" time="0.01" displayname="ArithmaticOperationsTest" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]">
+    <testcase name="testDivide" classname="personal.learning.useful.ArithmaticOperationsTest" time="0.01" displayname="Test case to divide an integers by other" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]/[method:testDivide()]"/>
+  </testsuite>
+</testrun>

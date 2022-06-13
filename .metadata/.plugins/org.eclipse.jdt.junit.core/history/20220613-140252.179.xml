@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SpringBoot_JUnit5_assume_N11" project="SpringBoot_JUnit5_assume_N11" tests="7" started="7" failures="0" errors="0" ignored="1">
+  <testsuite name="personal.learning.useful.ArithmaticOperationsTest" time="0.018" displayname="ArithmaticOperationsTest" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]">
+    <testcase name="testAdd" classname="personal.learning.useful.ArithmaticOperationsTest" time="0.006" displayname="Test case to add two integers" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]/[method:testAdd()]"/>
+    <testcase name="testSubtract" classname="personal.learning.useful.ArithmaticOperationsTest" time="0.001" displayname="Test case to subtract an integer from other" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]/[method:testSubtract()]"/>
+    <testcase name="testDivide" classname="personal.learning.useful.ArithmaticOperationsTest" time="0.005" displayname="Test case to divide an integers by other" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]/[method:testDivide()]"/>
+    <testcase name="testMultiply" classname="personal.learning.useful.ArithmaticOperationsTest" time="0.001" displayname="Test case to multiply two integers" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.ArithmaticOperationsTest]/[method:testMultiply()]"/>
+  </testsuite>
+  <testsuite name="personal.learning.useful.CollectionsRelatedTest" time="0.013" displayname="CollectionsRelatedTest" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.CollectionsRelatedTest]">
+    <testcase name="testReturnMap" classname="personal.learning.useful.CollectionsRelatedTest" time="0.0" ignored="true" displayname="Test case related to Map" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.CollectionsRelatedTest]/[method:testReturnMap()]"/>
+    <testcase name="testReTurnList" classname="personal.learning.useful.CollectionsRelatedTest" time="0.004" displayname="Test case related to List" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.CollectionsRelatedTest]/[method:testReTurnList()]"/>
+    <testcase name="testReturnArray" classname="personal.learning.useful.CollectionsRelatedTest" time="0.005" displayname="Test case related to Array" uniqueid="[engine:junit-jupiter]/[class:personal.learning.useful.CollectionsRelatedTest]/[method:testReturnArray()]"/>
+  </testsuite>
+</testrun>
